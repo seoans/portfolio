@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+    #wrap{
+        position:relative;
+        width:100%;
+        height:100vh;
+        background:black;
+        color:transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size:5em;
+    }
+    #wrap::before{
+        content:'HOME';
+        color:red;
+        opacity:0;
+        transition:0.3s;
+    }
+    #wrap:hover::before{
+        transform:translateX(100%);
+        opacity:1;
+    }
+    #wrap::after{
+        content:'HOME';
+        color:green;
+        opacity:1;
+        transform:translateX(-100%);
+        transition:0.3s;
+    }
+    #wrap:hover::after{
+        transform:translateX(0);
+        opacity:0;
+    }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        HOME
+    </div>
+    
+</body>
+</html>
